@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class demo {
+    public static void main(String[] args) {
+        Scanner s1=new Scanner(System.in);
+        System.out.println("Enter the Letter:");
+        int l=0,up=0,lc=0,d=0,ws=0,sc=0;
+        String a=s1.nextLine();
+        for(int i=0;i<a.length();i++){
+            char ch=a.charAt(i);
+            if(Character.isLetter(ch)){
+                l++;
+                if(Character.isUpperCase(ch))
+                up++;
+                else if(Character.isLowerCase(ch))
+                lc++;
+            }else if(Character.isDigit(ch)){
+                d++;
+            }else if(Character.isWhitespace(ch)){
+                ws++;
+            }else
+                sc++;
+        }
+        System.out.println("The given letter are:"+l);
+        System.out.println("The given uppercase are:"+up);
+        System.out.println("The given lowercase are:"+lc);
+        System.out.println("The given digit are:"+d);
+        System.out.println("The given whitespace are:"+ws);
+        System.out.println("The given spicalcase are:"+sc);
+    }
+}
